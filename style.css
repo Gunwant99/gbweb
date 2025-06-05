@@ -1,0 +1,149 @@
+/* Fonts + Base */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #fff;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  padding: 30px 0;
+  margin: auto;
+  position: relative;
+  z-index: 10; /* Keep above Vanta background */
+}
+
+/* Glass Cards */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  transition: transform 0.3s ease;
+}
+.glass:hover {
+  transform: translateY(-5px);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: 0 0 20px #00ffcc88;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  color: #00ffcc;
+  margin-bottom: 0.5rem;
+}
+.highlight {
+  color: #00ffcc;
+}
+.hero h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.cursor {
+  color: #00ffcc;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.btns a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s;
+}
+.btns a:hover {
+  background: #00ffcc;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Skills Section */
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.skills li {
+  background: #111;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #00ffcc;
+}
+
+/* Project Cards */
+.project-card {
+  background: rgba(0, 255, 204, 0.1);
+  border-left: 4px solid #00ffcc;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateX(5px);
+}
+.project-card a {
+  color: #00ffcc;
+  text-decoration: underline;
+}
+
+/* Contact */
+.contact a {
+  color: #00ffcc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+  .skills ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
